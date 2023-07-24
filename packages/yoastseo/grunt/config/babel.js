@@ -18,8 +18,8 @@ module.exports = {
 			dest: "dist/",
 		} ],
 		options: {
-			sourceMap: true,
-			comments: true,
+			sourceMap: false,
+			comments: false,
 		},
 	},
 };
