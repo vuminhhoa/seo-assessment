@@ -117,8 +117,7 @@ function isInternalLink( url, host ) {
 	if ( ! parsedUrl.host ) {
 		return true;
 	}
-
-	return parsedUrl.host === host;
+	return parsedUrl.host === host || parsedUrl.host === `www.${host}`;
 }
 
 /**
