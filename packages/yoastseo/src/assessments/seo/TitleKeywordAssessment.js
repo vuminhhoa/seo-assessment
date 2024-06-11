@@ -55,7 +55,7 @@ class TitleKeywordAssessment extends Assessment {
 
 		const assessmentResult = new AssessmentResult();
 
-		const calculatedResult = this.calculateResult( i18n, this._keyword );
+		const calculatedResult = this.calculateResult( paper, i18n, this._keyword );
 		assessmentResult.setScore( calculatedResult.score );
 		assessmentResult.setText( calculatedResult.resultText );
 
@@ -78,19 +78,23 @@ class TitleKeywordAssessment extends Assessment {
 	 * an exact match of the keyword is found in the beginning of the title. Returns OK results if all content words
 	 * from the keyphrase are in the title (in any form). Returns BAD otherwise.
 	 *
+	 * @param {Paper} paper The object used for translations.
 	 * @param {Jed} i18n The object used for translations.
 	 * @param {string} keyword The keyword of the paper (to be returned in the feedback strings).
 	 *
 	 * @returns {Object} Object with score and text.
 	 */
-	calculateResult( i18n, keyword ) {
+	calculateResult( paper, i18n, keyword ) {
 		const exactMatchFound = this._keywordMatches.exactMatchFound;
 		const position = this._keywordMatches.position;
 		const allWordsFound = this._keywordMatches.allWordsFound;
 		const exactMatchKeyphrase = this._keywordMatches.exactMatchKeyphrase;
+		const title = paper.getTitle();
+		const titleLength = title.length;
+		const threshold = Math.floor( titleLength * 0.3 );
 
 		if ( exactMatchFound === true ) {
-			if ( position === 0 ) {
+			if ( position >= 0 && position <= threshold ) {
 				return {
 					score: this._config.scores.good,
 					resultText: i18n.sprintf(
