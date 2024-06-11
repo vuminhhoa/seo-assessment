@@ -17,6 +17,7 @@ import OutboundLinks from "./assessments/seo/OutboundLinksAssessment";
 import TitleWidth from "./assessments/seo/PageTitleWidthAssessment";
 import FunctionWordsInKeyphrase from "./assessments/seo/FunctionWordsInKeyphraseAssessment";
 import SingleH1Assessment from "./assessments/seo/SingleH1Assessment";
+import BoldItalicAccessment from "./assessments/seo/BoldItalicAccessment";
 
 /**
  * Creates the Assessor
@@ -48,6 +49,7 @@ const SEOAssessor = function( i18n, options ) {
 		new UrlKeywordAssessment(),
 		new FunctionWordsInKeyphrase(),
 		new SingleH1Assessment(),
+		new BoldItalicAccessment(),
 	];
 };
 

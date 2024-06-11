@@ -47,6 +47,7 @@ import h1s from "./researches/h1s";
 import getProminentWordsForInsights from "./researches/getProminentWordsForInsights";
 import getProminentWordsForInternalLinking from "./researches/getProminentWordsForInternalLinking";
 import getWordForms from "./researches/getWordForms";
+import getBoldItalicFormats from "./researches/getBoldItalicFormats";
 
 /**
  * This contains all possible, default researches.
@@ -97,6 +98,7 @@ var Researcher = function( paper ) {
 		h1s: h1s,
 		prominentWordsForInsights: getProminentWordsForInsights,
 		prominentWordsForInternalLinking: getProminentWordsForInternalLinking,
+		getBoldItalicFormats: getBoldItalicFormats,
 	};
 
 	this._data = {};
