@@ -48,6 +48,7 @@ import getProminentWordsForInsights from "./researches/getProminentWordsForInsig
 import getProminentWordsForInternalLinking from "./researches/getProminentWordsForInternalLinking";
 import getWordForms from "./researches/getWordForms";
 import getBoldItalicFormats from "./researches/getBoldItalicFormats";
+import getBulletCount from "./researches/getBulletCount";
 
 /**
  * This contains all possible, default researches.
@@ -99,6 +100,7 @@ var Researcher = function( paper ) {
 		prominentWordsForInsights: getProminentWordsForInsights,
 		prominentWordsForInternalLinking: getProminentWordsForInternalLinking,
 		getBoldItalicFormats: getBoldItalicFormats,
+		getBulletCount: getBulletCount,
 	};
 
 	this._data = {};
