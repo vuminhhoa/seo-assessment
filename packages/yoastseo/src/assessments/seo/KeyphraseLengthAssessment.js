@@ -27,7 +27,7 @@ class KeyphraseLengthAssessment extends Assessment {
 		const defaultConfig = {
 			parameters: {
 				recommendedMinimum: 1,
-				recommendedMaximum: 4,
+				recommendedMaximum: 5,
 				acceptableMaximum: 8,
 			},
 			parametersNoFunctionWordSupport: {
