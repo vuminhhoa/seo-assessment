@@ -110,7 +110,7 @@ export default function( paper, researcher ) {
 	const topicForms = researcher.getResearch( "morphology" );
 	const locale = paper.getLocale();
 
-	let paragraphs = matchParagraphs( paper.getText() );
+	let paragraphs = matchParagraphs( paper.getText(), true );
 	paragraphs = reject( paragraphs, isEmpty );
 	paragraphs = reject( paragraphs, paragraphHasNoText )[ 0 ] || "";
 

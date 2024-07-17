@@ -30,7 +30,7 @@ var getParagraphsInTags = function( text ) {
  * @param {string} text The text to match paragraph in.
  * @returns {Array} The array containing all paragraphs from the text.
  */
-export default function( text ) {
+export default function( text, isIgnoreHeading=false ) {
 	var paragraphs = getParagraphsInTags( text );
 
 	if ( paragraphs.length > 0 ) {
@@ -42,7 +42,7 @@ export default function( text ) {
 
 	blocks = filter( blocks, function( block ) {
 		// Match explicit paragraph tags, or if a block has no HTML tags.
-		return 0 !== block.indexOf( "<h" );
+		return 0 !== block.indexOf( "<h" ) && !isIgnoreHeading;
 	} );
 
 	paragraphs = flatMap( blocks, function( block ) {

@@ -25109,6 +25109,21 @@ yeoman-generator@^2.0.5:
     through2 "^2.0.0"
     yeoman-environment "^2.0.5"
 
+yoastseo@^1.91.0:
+  version "1.91.2"
+  resolved "https://registry.yarnpkg.com/yoastseo/-/yoastseo-1.91.2.tgz#fec674d8506a2db8fb215a0cdea4d4b20f0668b0"
+  integrity sha512-+EM5P7siIxwKx5jTuFGo/XP3f+5+ylLyklCxXJSQsJkvRoz3IVsWFxp9Av4ZaWN8ZqX/PkL6p/XFndWz8QXZPQ==
+  dependencies:
+    "@wordpress/autop" "^2.0.2"
+    "@yoast/feature-flag" "^0.5.2"
+    htmlparser2 "^3.9.2"
+    jed "^1.1.0"
+    lodash-es "^4.17.10"
+    loglevel "^1.6.1"
+    parse5 "^5.1.0"
+    sassdash "0.9.0"
+    tokenizer2 "^2.0.1"
+
 "yoastseo@git+https://github.com/Yoast/YoastSEO.js.git#master":
   version "1.48.0"
   resolved "git+https://github.com/Yoast/YoastSEO.js.git#a295be8a078e6473b64300832d8d21b8b3512e44"
